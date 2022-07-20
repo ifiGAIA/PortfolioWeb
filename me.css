@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(45deg, #61c8fb,#d05aff); /*#8460ed, #ff1252 */
+    background: #f53b57;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+.card
+{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    /* height: 450px;
+    width: 900px; */
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+.card:hover
+{
+    height: 450px;
+    width: 900px;
+    transform: translate(-10%);
+}
+.card .imgBx
+{
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card:hover .imgBx
+{
+    width: 250px;
+    height: 250px;
+    transform: translate(-150%);
+}
+.card .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .content
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .content .details
+{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(390px);
+}
+.card:hover .content .details
+{
+    transform: translateY(390px);
+    /* transform: translateY(0px) translateX(0px); */
+}
+.card .content .details h2
+{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+    transition: 0.5s;
+}
+.card:hover .content .details h2
+{
+    transform: translateX(-30%) translateY(-160%);
+    font-size: 2em;
+}
+.card .content .details h2 span
+{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.card .content .details .data
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    margin: 20px 0;
+    transition: 0.5s;
+}
+.card:hover .content .details .data
+{
+    transform: translateY(-160%) translateX(45%);
+}
+.card .content .details .data h3
+{
+    padding: 20px 0;
+    font-size: 1.5em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card .content .details .data h3 span
+{
+    font-size: 0.85em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.frontimg
+{
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 20px;
+    transform: translateX(-20%);
+}
+.front img
+{
+    width: 100%;
+    height: 100%;
+}
+.front .inimg1
+{
+    position: absolute;
+    grid-row: 1/3;
+    grid-column: 1/3;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.inimgintro
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: 0.5s;
+}
+.inimgintro:hover
+{
+    opacity: 1;
+}
+.inimgintro p
+{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #fff;
+}
+.front .inimg2
+{
+    position: absolute;
+    grid-row: 1/3;
+    grid-column: 3/5;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+.front .inimg3
+{
+    position: absolute;
+    grid-row: 3/5;
+    grid-column: 1/3;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+.front .inimg4
+{
+    position: absolute;
+    grid-row: 3/5;
+    grid-column: 3/5;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+
+.gameimg
+{
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 20px;
+    transform: translateX(-40%);
+}
+.game img
+{
+    width: 100%;
+    height: 100%;
+}
+.game .gimg1
+{
+    position: absolute;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    width: 470px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.game .gimg2
+{
+    position: absolute;
+    grid-row: 1/3;
+    grid-column: 4/5;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+.game .gimg3
+{
+    position: absolute;
+    grid-row: 3/5;
+    grid-column: 1/2;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    object-fit: contain;
+}
+.game .gimg4
+{
+    position: absolute;
+    grid-row: 3/5;
+    grid-column: 3/5;
+    width: 470px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+.height2
+{
+    position: absolute;
+    width: 50px;
+    height: 2000px;
+    top: 0;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+}
+.aro
+{
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    /* display: none; */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+.coffeeShop .imgBx
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    left: 140px;
+    top: 115px;
+    background: #ffa801;
+    border-radius: 50%;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.coffeeShop .imgBx img
+{
+    width: 80%;
+    height: 80%;
+}
+.coffeeShop .content
+{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    left: 550px;
+    top: 270px;
+    background: rgba(222, 111, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+.coffeeShop .content span
+{
+    position: absolute;
+    background: #ffffff; /*A606068*/
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animateFlow1 1s linear infinite;
+}
+.coffeeShop .uiintro
+{
+    position: absolute;
+    display: flex;
+    background: rgba(0, 0, 0, 0);
+    width: 1130px;
+    height: 450px;
+    top: 800px;
+    left: 190px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    transition: 0.5s;
+}
+.coffeeShop .section1
+{
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    background: #000;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+.coffeeShop .section1 img
+{
+    width: 100%;
+    height: 100%;
+}
+.coffeeShop .section2
+{
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    background: #000;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+.coffeeShop .section2 img
+{
+    width: 100%;
+    height: 100%;
+}
+.coffeeShop .section3
+{
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    background: #000;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+.coffeeShop .section3 img
+{
+    width: 100%;
+    height: 100%;
+}
+.coffeeShop .section4
+{
+    width: 350px;
+    height: 200px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+.coffeeShop .section4 img
+{
+    width: 100%;
+    height: 100%;
+}
+.coffeeShop .section5
+{
+    width: 350px;
+    height: 200px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+.coffeeShop .section5 img
+{
+    width: 100%;
+    height: 100%;
+}
+.coffeeShop .section6
+{
+    width: 350px;
+    height: 200px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+.coffeeShop .section6 img
+{
+    width: 100%;
+    height: 100%;
+}
+.coffeeShop .t:hover
+{
+    transform: scale(1.5,1.5);
+    z-index: 1001;
+}
+.coffeeShop .b:hover
+{
+    transform: scale(1.5,1.5) translateY(-10%);
+    z-index: 1001;
+}
+@keyframes animateFlow1
+{
+    0%
+    {
+        width: 0;
+        height: 0;
+        opacity: 0.6;
+    }
+    50%
+    {
+        width: 300px;
+        height: 300px;
+        opacity: 0.3;
+    }
+    100%
+    {
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+    }
+}
+.coffeeShop .content img
+{
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+}
+.coffeeShop .content h2
+{
+    color: #000000;
+    font-size: 2em;
+    font-weight: 600;
+    transform: translateX(110px) translateY(30px);
+}
+.coffeeShop .content p
+{
+    padding: 30px;
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 600;
+    transform: translateY(50px);
+}
+.coffeeShop .plot
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 648px;
+    height: 200px;
+    top: 630px;
+}
+.coffeeShop .plot h2
+{
+    font-size: 3em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.coffeeShop .plot p
+{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.coffeeShop .videointro
+{
+    position: absolute;
+    top: 1300px;
+    left: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.coffeeShop .videointro h2
+{
+    font-size: 3em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.coffeeShop .videointro video
+{
+    position: relative;
+    width: 960px;
+    top: 40px;
+    border-radius: 20px;
+}
+.navigation
+{
+    position: absolute;
+    width: 70px;
+    height: 280px;
+    right: 200px;
+    background:#fff;
+    border-radius: 35px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+.navigation ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li.active a .icon
+{
+    color: #fff;
+}
+.navigation ul li a .icon i
+{
+    font-size: 24px;
+}
+.navigation ul li a .title
+{
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    background: #fff;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+}
+.navigation ul li:hover a .title
+{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-25px) translateY(-50%);
+}
+.navigation ul li a .title::before
+{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    left: -8px;
+    top: 46%;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+}
+.navigation ul .indicater
+{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    transition: 0.5s;
+}
+.navigation ul .indicater::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    background: #333;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicater
+{
+    transform: translateY(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicater
+{
+    transform: translateY(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicater
+{
+    transform: translateY(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicater
+{
+    transform: translateY(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(1).active ~ .indicater::before
+{
+    background: #f53b57;
+}
+.navigation ul li:nth-child(2).active ~ .indicater::before
+{
+    background: #3c40c6;
+}
+.navigation ul li:nth-child(3).active ~ .indicater::before
+{
+    background: #05c46b;
+}
+.navigation ul li:nth-child(4).active ~ .indicater::before
+{
+    background: #ffa801;
+}
+
+spanp
+{
+    position: absolute;
+    background: #f00;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    border-radius: 50%;
+}
+spanp::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    animation: moveParticles 2s linear infinite;
+}
+@keyframes moveParticles
+{
+    0%
+    {
+        transform: translate(0);
+    }
+    100%
+    {
+        transform: translate(300px);
+    }
+}
