@@ -221,3 +221,36 @@ bactop.addEventListener("click", (event) => {
         behavior: 'smooth'
       });
 });
+
+
+
+
+// var str = "a bb ccc";
+
+var lengthOfLongestSubstring = function(s) {
+    let arr = s.split(" ");
+    var l = 3
+    for(let i=0; i<arr.length; i++){
+    
+        if(arr[i].length>=l)
+        {
+            return arr[i];
+        }
+    };
+};
+console.log(lengthOfLongestSubstring("a bb ccc"));
+
+function Test1(){
+    // for(var i =10; i>0; i--)
+    // {
+    //     if(i>6) break;
+    // }
+    // console.log(i);
+    var a=1;
+    var b=2;
+    var c;
+    console.log(a++ + ++a + ++a);
+    // c = a++ + ++a + ++a + b--;
+    console.log(c);
+}
+Test1();
